@@ -6,7 +6,7 @@ var lines = [];
 
 $(function() {
     let jsonUrl = "TW-pharmacy.json";
-    let maskDataUrl = "https://mask-data.peterli.website/index.php";
+    let maskDataUrl = "https://mask-data.peterli.website/mask.php";
     intialize();
     getPharmcyData(jsonUrl);
     getMaskData(maskDataUrl);
@@ -20,7 +20,7 @@ function intialize() {
 }
 
 function getMaskData(maskDataUrl) {
-    $.get(maskDataUrl, function(data) {
+    $.get(maskDataUrl, function(allText) {
         // 醫事機構代碼,醫事機構名稱,醫事機構地址,醫事機構電話,成人口罩總剩餘數,兒童口罩剩餘數,來源資料時間
         var allTextLines = allText.split(/\r\n|\n/);
         var headers = allTextLines[0].split(',');
