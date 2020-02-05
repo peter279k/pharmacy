@@ -11,6 +11,10 @@ h6, label {
     font-size: 3.5vmin;
 }
 
+.mask-info {
+    color: #3498db;
+}
+
 .card-body {
     border-bottom: solid lightgrey 1px;
 }

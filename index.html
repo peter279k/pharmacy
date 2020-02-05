@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>健保特約藥局列表</title>
+    <title>藥局口罩查詢列表</title>
     <meta charset="utf-8">
     <meta name="author" content="SOSELab@NTOU">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,16 +32,22 @@
     -->
 
     <h5 style="margin:20px;color:navy">健保特約藥局列表</h5>
-    <label style="margin-left:20px;">請輸入關鍵字過濾(如基隆市中正區):
-        <input id="myInput" type="text" placeholder="Search.." />
-        <input id="search" type="button" value="過濾" /></label><br>
-    <label><input id="all" style="margin-left:20px;" type="button" value="全部顯示" /></label>
-    <br><span id="msg" style="margin-left:20px;">(載入全部資料需花一點時間，請稍候)</span>
+    <p>
+        <label style="margin-left:20px;">請輸入關鍵字過濾(如基隆市中正區):
+            <input id="myInput" type="text" placeholder="Search.." />
+            <input id="search" type="button" value="過濾" />
+        </label>
+    </p>
+    <p>
+        <label>
+            <input id="all" style="margin-left:20px;" type="button" value="全部顯示" />
+        </label>
+    </p>
+    <span id="msg" style="margin-left:20px;">(載入全部資料需花一點時間，請稍候)</span>
 
     <div class="loader" id="loading" style="margin:20px;"></div>
 
-    <div class="card" style="margin:20px;" id="list">
-    </div>
+    <div class="card" style="margin:20px;" id="list"></div>
 
 </body>
 
