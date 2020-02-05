@@ -6,7 +6,7 @@ var lines = [];
 
 $(function() {
     let jsonUrl = "TW-pharmacy.json";
-    let maskDataUrl = "https://mask-data.peterli.website";
+    let maskDataUrl = "https://mask-data.peterli.website/index.php";
     intialize();
     getPharmcyData(jsonUrl);
     getMaskData(maskDataUrl);
@@ -43,10 +43,10 @@ function getMaskData(maskDataUrl) {
 }
 
 function searchMask(pharmacyId) {
-    pharmacyId = pharmacyId.replace(/ /g, "");
+    pharmacyId = String(pharmacyId).replace(/ /g, "");
     let maskData = [];
     for (let index in lines) {
-        lines[index][0] = lines[index][0].replace(/ /g, "");
+        lines[index][0] = String(lines[index][0]).replace(/ /g, "");
         if (lines[index][0] === pharmacyId) {
             maskData = lines[index];
             break;
