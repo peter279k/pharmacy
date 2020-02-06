@@ -46,8 +46,8 @@ function searchMask(pharmacyId) {
     pharmacyId = String(pharmacyId).replace(/ /g, "");
     let maskData = [];
     for (let index in lines) {
-        lines[index][0] = String(lines[index][0]).replace(/ /g, "");
-        if (lines[index][0] === pharmacyId) {
+        lines[index][0].id = String(lines[index][0].id).replace(/ /g, "");
+        if (lines[index][0].id === pharmacyId) {
             maskData = lines[index];
             break;
         }
