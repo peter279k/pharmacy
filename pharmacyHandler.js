@@ -100,7 +100,7 @@ function getAvailableMaskDataLists(maskDataUrl) {
             //Add new card body
             let content = [
                 "<div class='card-body'>",
-                "<h5 class='card-title' >", lines[item][0], ": ", lines[item][1] + "</h5>",
+                "<h5 class='card-title' ><p>", lines[item][0], "</p>", lines[item][1] + "</h5>",
                 "<p>",
                 "<h6 class='card-subtitle mb-2 text-muted'>", addr, "</h6>",
                 "</p>",
