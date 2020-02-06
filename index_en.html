@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Pharmacy Mask Search Lists</title>
+    <meta charset="utf-8">
+    <meta name="author" content="SOSELab@NTOU">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="pharmacyStyle.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" src="pharmacyHandlerEn.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- template
+    <div class="card" style="width: 18rem;" id="list">
+        <div class="card-body">
+            <h5 class="card-title">健保診所</h5>
+            <h6 class="card-subtitle mb-2 text-muted">住址與電話</h6>
+            <a href="#" class="card-link">地圖連結</a>
+            <a href="#" class="card-link">中央健保署連結</a>
+        </div>
+    </div>
+    -->
+
+    <h5 style="margin:20px;color:navy">I want to buy masks <a target="_blank" href="how_to_buy.html">How to buy mask? </a><a href="index.html">中文</a></h5>
+    <p>
+        <label style="margin-left:20px;">Please input key words(e.g. 基隆市中正區):
+            <input id="myInput" type="text" placeholder="Search.." />
+            <input id="search" type="button" value="Search" />
+        </label>
+    </p>
+    <p>
+        <label style="margin-left:20px;">Please select administrative areas:
+            <select id="administrative-areas">
+                <option value="">administrative area</option>
+                <option value="台北市">Taipei City</option>
+                <option value="新北市">New Taipei City</option>
+                <option value="桃園市">Taoyuan City</option>
+                <option value="新竹縣">Hsinchu County</option>
+                <option value="新竹市">Hsinchu City</option>
+                <option value="苗栗縣">Miaoli County</option>
+                <option value="台中市">Taichung City</option>
+                <option value="彰化縣">Changhua County</option>
+                <option value="雲林縣">Yunlin County</option>
+                <option value="嘉義縣">Chiayi County</option>
+                <option value="嘉義市">Chiayi City</option>
+                <option value="台南市">Tainan City</option>
+                <option value="高雄市">Kaohsiung City</option>
+                <option value="屏東縣">Pingtung County</option>
+                <option value="台東縣">Taitung County</option>
+                <option value="花蓮縣">Hualien County</option>
+                <option value="宜蘭縣">Yilan County</option>
+                <option value="基隆市">Keelung City</option>
+                <option value="南投縣">Nantou County</option>
+            </select>
+        </label>
+    </p>
+    <p>
+        <label>
+            <input id="all" style="margin-left:20px;" type="button" value="Show all" />
+        </label>
+    </p>
+    <span id="msg" style="margin-left:20px;">(All data will be loaded，please wait...)</span>
+
+    <div class="loader" id="loading" style="margin:20px;"></div>
+
+    <div class="card" style="margin:20px;" id="list"></div>
+
+</body>
+
+</html>
