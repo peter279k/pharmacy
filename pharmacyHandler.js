@@ -82,7 +82,7 @@ function getAvailableMaskDataLists(maskDataUrl) {
 
             let addr = lines[item][2] ? lines[item][2] : "住址無資料";
             let tel = lines[item][3] ? lines[item][3] : "電話無資料";
-            let mapURL = lines[item][2] ? "https://www.google.com/maps?q=" + lines[item][1] + "+" + lines[item][2] : "https://www.google.com/maps?q=" + lines[item][1];
+            let mapURL = lines[item][2] ? "https://www.google.com/maps?q=" + lines[item][1].split(':')[1] + "+" + lines[item][2].split(':')[1] : "https://www.google.com/maps?q=" + lines[item][1].split(':')[1];
 
             let adultMaskNumber = 0;
             let childMaskNumber = 0;
@@ -117,7 +117,7 @@ function getAvailableMaskDataLists(maskDataUrl) {
                 "<h6 class='card-subtitle mb-2 text-muted mask-info'>", updatedTime, "</h6>",
                 "</p>",
                 "<a href = '", mapURL, "' target='_blank' class='card-link'>地圖連結</a>",
-                "<a href = 'http://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?HospID=", lines[item][0], "' target='_blank' class='card-link'>中央健保署連結</a>",
+                "<a href = 'http://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?HospID=", lines[item][0].split(':')[1], "' target='_blank' class='card-link'>中央健保署連結</a>",
                 "</div>"
             ].join("");
             $("#list").append(content);
