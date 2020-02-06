@@ -31,7 +31,7 @@ function getMaskData(maskDataUrl, jsonUrl) {
 
                 var row = [];
                 for (var j=0; j<headers.length; j++) {
-                    row.push(headers[j]+":"+data[j]);
+                    row.push(headers[j]+": "+data[j]);
                 }
                 lines.push(row);
             }
@@ -94,9 +94,8 @@ function getAvailableMaskDataLists(maskDataUrl) {
                 updatedTime = lines[item][6];
             }
 
-            adultMaskNumber = "成人口罩總剩餘數: " + String(adultMaskNumber);
-            childMaskNumber = "兒童口罩總剩餘數: " + String(childMaskNumber);
-            updatedTime = "來源更新時間: " + updatedTime;
+            adultMaskNumber = String(adultMaskNumber);
+            childMaskNumber = String(childMaskNumber);
 
             //Add new card body
             let content = [
