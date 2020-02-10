@@ -107,8 +107,8 @@ function getAvailableMaskDataLists(maskDataUrl) {
 
             addr = addr.replace('醫事機構地址', 'Pharmacy address');
             tel = tel.replace('醫事機構電話', 'Pharmacy phone number');
-            adultMaskNumber = adultMaskNumber.replace('成人口罩總剩餘數', 'Available adult mask numbers');
-            childMaskNumber = childMaskNumber.replace('兒童口罩剩餘數', 'Available adult mask numbers');
+            adultMaskNumber = adultMaskNumber.replace('成人口罩剩餘數', 'Available adult mask numbers');
+            childMaskNumber = childMaskNumber.replace('兒童口罩剩餘數', 'Available child mask numbers');
             updatedTime = updatedTime.replace('來源資料時間', 'Last updated time');
 
             pharmacyId = lines[item][0].replace('醫事機構代碼', 'Pharmacy ID');
